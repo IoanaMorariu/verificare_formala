@@ -1,0 +1,32 @@
+
+(declare-const X_0 Real)
+(declare-const X_1 Real)
+(declare-const X_2 Real)
+(declare-const X_3 Real)
+(declare-const X_4 Real)
+
+
+(declare-const Y_0 Real)
+
+; Input constraints:
+(assert (<= X_0 0.4932553768157959))
+(assert (>= X_0 0.4832553565502167))
+
+(assert (<= X_1 0.39941683411598206))
+(assert (>= X_1 0.3894168436527252))
+
+(assert (<= X_2 -0.9950000047683716))
+(assert (>= X_2 -0.9950000047683716))
+
+(assert (<= X_3 0.9664723873138428))
+(assert (>= X_3 0.9664723873138428))
+
+(assert (<= X_4 0.056158263236284256))
+(assert (>= X_4 0.056158263236284256))
+
+
+; Output constraints:
+(assert (or
+    (and (>= Y_0 0.4982553720474243))
+    (and (<= Y_0 0.47825536131858826))
+))
