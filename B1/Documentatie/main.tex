@@ -1,0 +1,113 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{float}
+\usepackage{csquotes}
+\usepackage[english]{babel}
+\usepackage{multirow}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{subfig}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tabularx} % Adaugat pachetul tabularx
+\usepackage{changepage} % Adaugă pachetul pentru mediu adjustwidth
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\renewcommand\thesection{\arabic{section}.} 
+\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}} % Subsubsection numbering format
+
+
+\title{Verificarea rețelelor neuronale folosind alpha\textunderscore beta\textunderscore crown și NeuralSat pentru benchmark-ul cGan al competiției VNN-Comp 2023}
+\author{ Diaconu Laura\\ Domșa Emanuel\\Laptedulce Anastasia \\ Morariu Ioana-Alexandra \\ Romaneț Rareș}
+
+\date{}
+
+
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+In this paper, we attempted to reproduce the results from the VNNCOMP-2023 competition, specifically focusing on the alpha-beta-CROWN and Marabou tools applied to the cGAN benchmark within the same competition. The paper begins with a brief description of how cGAN neural networks operate, followed by a characterization of the dataset and the steps taken to install the tools and run them. We analyzed the data obtained from the runs and compared them with those obtained in the competition. \textbf{TO DO: Maybe add a brief ideea of the conlusions made after analysis}
+\end{abstract}
+\tableofcontents
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introducere - Funcționarea rețelei neuronale}
+\input{segmente/introducere}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Caracterizarea setului de date}
+\input{segmente/caracterizareSetDeDate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Instalarea și configurarea tool-urilor}
+\input{segmente/instalare si configurare/general}
+    \subsection{alpha-beta-CROWN}
+    \input{segmente/instalare si configurare/alpha-beta_CROWN}
+    \subsection{NeuralSAT}
+    \input{segmente/instalare si configurare/neuralSAT}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Rularea tool-urilor}
+\input{segmente/rulare/general}
+    \subsection{alpha-beta-CROWN}
+    \input{segmente/rulare/alpha-beta-CROWN}
+    \subsection{NeuralSAT}
+    \input{segmente/rulare/neuralSAT}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Interpretarea rezultatelor}
+\input{segmente/interpretare rezultate/general}
+    \subsection{alpha-beta-CROWN}
+    \input{segmente/interpretare rezultate/alpha-beta-CROWN}
+    \subsection{NeuralSAT}
+    \input{segmente/interpretare rezultate/neuralSAT}
+    \subsection{Compararea rezultatelor obținute pe cele două tool-uri}
+    \input{segmente/interpretare rezultate/comparareaRezultatelor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Rețelele neuronale în simularea provocărilor reale}
+\input{segmente/ReteleleNeuronaleInSimulareaProvocarilorReal}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Concluzii}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\bibliography{mybib}
+\bibliographystyle{IEEEtran}
+\bibliographystyle{alpha}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\end{document}
