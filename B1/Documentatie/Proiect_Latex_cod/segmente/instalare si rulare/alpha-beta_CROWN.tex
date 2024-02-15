@@ -1,0 +1,21 @@
+Pentru a instala alpha\textunderscore beta\textunderscore CROWN am urmărit pașii de la capitolul \textit{Installation and Setup} din fișierul de READ.ME gasit pe link-ul de github al tool-ului \cite{read_abc.md}. 
+Suplimentar pașilor din ghid, am clonat submodulul \textit{auto\textunderscore LIRPA} în interiorul directorului alpha-beta-CROWN. 
+    \begin{lstlisting}[style=bashstyle]
+    git clone https://github.com/Verified-
+    Intelligence/auto_LiRPA.git alpha-beta-CROWN/auto_LiRPA
+   \end{lstlisting}
+
+Următorul pas efectuat ce nu se regăsește în ghid, a fost crearea directorului \texttt{vnncomp2023\_benchmarks} și clonarea repository-ului \cite{cganrepository} în interiorul acestuia. Ulterior, am modificat \textbf{root path-ului} în fișierul \texttt{cgan.yaml} conform locației reale a directorului \texttt{cgan}.
+
+La rularea tool-ului ne-am confruntat cu o eroarea legată de lipsa librării \texttt{libcudnn\_cnn\_infer.so.8}. Adăugarea următoarei linii în fișierul \texttt{.bashrc} a rezolvat problema.
+  \begin{lstlisting}[style=bashstyle]
+    export LD_LIBRARY_PATH=/usr/lib/wsl/lib:$LD_LIBRARY_PATH
+  \end{lstlisting}
+  
+Comanda de rularea a tool-ului este redată mai jos.
+  \begin{lstlisting}[style=bashstyle]
+    python abcrown.py --config exp_configs/vnncomp23/cgan.yaml
+  \end{lstlisting}
+In dependență de conținutul fișierului \textit{cgan.yaml}, respectiva comandă are output diferit.
+
+Cel mai dificil pas a fost remedierea erorii legate de libraria libcudnn\textunderscore cnn\textunderscore infer.so.8., fiind si pasul care a durat cel mai mult timp. Am rezolvat aceasta eroare folosind multiple sugestii gasite pe diferite platforme online \cite{bashrcfix}.

@@ -29,3 +29,49 @@ Atât fișierele .onnx cât și .vnnlib au o denumire sugestivă care să indice
   \item \textit{upsample} - modelul neuronal efectuează operații de upsampling, care sunt utilizate pentru a mări dimensiunea spațială a imaginilor sau a datelor. Aceasta poate fi utilă în cazul modelelor generatoare pentru a genera imagini de rezoluție mai mare sau în alte scenarii în care este necesară mărirea dimensiunii datelor.
   
 \end{itemize}
+
+Toate fisierele .vnnlib au același conținut, diferențiindu-se prin valorile datelor.
+
+\begin{lstlisting}[language=Lisp, caption={Exemplu de cod SMT-LIB din fisierele vnnlib}, label={lst:smtlib}, basicstyle=\scriptsize\ttfamily]
+(declare-const X_0 Real)
+(declare-const X_1 Real)
+(declare-const X_2 Real)
+(declare-const X_3 Real)
+(declare-const X_4 Real)
+
+(declare-const Y_0 Real)
+
+; Input constraints:
+(assert (<= X_0 val_1_X0))
+(assert (>= X_0 val_2_X0))
+
+(assert (<= X_1 val_1_X1))
+(assert (>= X_1 val_2_X1))
+
+(assert (<= X_2 val_1_X2))
+(assert (>= X_2 val_2_X2))
+
+(assert (<= X_3 val_1_X3))
+(assert (>= X_3 val_2_X3))
+
+(assert (<= X_4 val_1_X4))
+(assert (>= X_4 val_2_X4))
+
+; Output constraints:
+(assert (or
+    (and (>= Y_0 val_1_Y0))
+    (and (<= Y_0 val_2_Y0))
+))
+
+\end{lstlisting}
+
+Luând în considerare succinta descriere a autorului benchmark-ului , din fișiere .vnnlib, am dedus următoarele:
+
+\begin{itemize}
+  \item \textit{X\_0} - reprezintă condiția de distanță ce este o variabilă cuprinsă între 0 și 1 și reprezintă normalizarea de la 0m la 30 m (de exemplu dacă condiția de distanță este 0,5, înseamnă că va fi generată o imagine ce are obstacolul la 0,5*30m=15m)
+  
+  \item \textit{$X\_1$ și până la $X\_4$} - reprezintă valorile vectorului de zgomot care controlează mediul
+  
+  \item \textit{$Y\_0$}  - reprezintă distanța dată de către generator
+  
+\end{itemize}
