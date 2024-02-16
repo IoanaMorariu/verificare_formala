@@ -1,14 +1,26 @@
-În tabelul de mai jos se prezintă o analiză comparativă între rezultatele obținute în urma rulării proprii și cele obținute în cadrul competiției. Fișierele cu rezultatele rulărilor pot fi accesate la următoarele linkuri:
-\href{https://docs.google.com/spreadsheets/d/1iGJHwePCzW0axJIwVes_eiN3R4ppvNu-ndrO_Fy5dL0/edit#gid=1265769327}{rezultate competiție }
-\href{https://docs.google.com/spreadsheets/d/1kSxunni8qgQLT6ZkCRWvSO2VMy2Hz7qA/edit#gid=1476783028}{rezultate echipă}
+Pentru a putea interpreta datele rezultate le-am clasificat manual într-un tabel, precum cel din cadrul competiției pentru a putea face și o comparație între ele. Câmpurile de tabel sunt următoarele:
+\begin{itemize}
+    \item \textbf{Benchmark}: Benchmark-ul pentru care avem înregistrate rezultatele.
+    \item \textbf{neural network (ONNX)}: Fișierul ONNX pentru care a rulat tool-ul.
+    \item \textbf{specifications (VNNLIB)}: Fișierul VNNLIB pentru care a rulat tool-ul.
+    \item \textbf{results (vnncomp2023/us)}: Poate avea valori sat/unsat; sat înseamnă că modelul îndeplinește condițiile din fișierul VNNLIB, adică distanța aproximată de discriminator este aceeași cu distanța pe care a primit-o generatorul ca și dată de intrare; unsat înseamnă că discriminatorul nu a reușit să facă o aproximare corectă.
+    Prima coloană cu rezultate reprezintă rezultatele obținute în competiție, iar a două coloană cu rezultate este obținută de noi.
+    \item \textbf{time to verify (vnncomp2023/us)}: Timpul de rulare a fișierului ONNX pentru specificațiile din fișierul VNNLIB, exprimat în secunde. Prima coloană reprezintă timpii obținuți în competiție, iar cea de-a doua coloană reprezintă timpii obținuți de noi.
+\end{itemize}
+
+În tabelul de mai jos se prezintă o analiză comparativă între rezultatele obținute în urma rulării proprii și cele obținute în cadrul competiției.
 
 \begin{figure}[h]
 \centering 
 \includegraphics[width=0.8\linewidth]{imagini/interpretare rezultate/abC_comp_vs_us.png}
-\caption{Rezultate alpha-beta-CROWN}
+\caption{Comparare rezultate alpha-beta-CROWN}
 \label{fig:image1} 
 \end{figure}
+\
 
-Din tabelul \ref{fig:image1}, este de notat faptul că pentru fiecare intrare, rezultatele(sat/unsat) au fost aceleași, atât pentru rezultatele rulării noastre, cât și pentru cele din competiție. Diferenta dintre competitie si echipa o constituie timpul de verificare. Timpul de verificare înregistrat al echipei este mai mic cu aproximativ 3 secunde pentru intrările unde rezultatul este satisfiabil. În schimb, pentru intrările cu rezultat nesatisfiabil timpul de verificare este considerabil mai mare.
+Conform tabelului prezentat în \ref{fig:image1}, este de remarcat faptul că pentru fiecare intrare, rezultatele (sat/unsat) au fost aceleași, atât pentru rezultatele rulării noastre, cât și pentru cele din competiție. Diferența dintre rezultatele din competitie si cele extrase de echipa noastră o constituie timpul de verificare.
+În tabel sunt evidențiați cu culoarea verde timpii mai reduși de verificare pentru aceleași instanțe.
 
-Conform tabelului prezentat în \ref{fig:image1}, este de remarcat faptul că pentru fiecare intrare, rezultatele satisfiabil/nesatisfiabil) au fost aceleași, atât pentru rezultatele rulării proprii, cât și pentru cele din competiție. Diferența majoră între competiție și echipa noastră o constituie timpul de verificare. Timpul de verificare înregistrat al echipei noastre este mai mic cu aproximativ 3 secunde pentru intrările cu rezultat satisfiabil. În schimb, pentru intrările cu rezultat nesatisfiabil, timpul de verificare este considerabil mai mare.
+Timpul de verificare înregistrat al echipei este în medie mai mic cu aproximativ 3 secunde pentru intrările unde rezultatul este satisfiabil. În schimb, pentru intrările cu rezultat nesatisfiabil timpul de verificare variază în funcție de instanțe, și anume: am obținut timpi mai mici de execuție pentru instanțele cu timp de execuție mai mic, iar pentru instanțele cu timp de execuție mai mare timpul înregistrat de noi a fost mai mare decât cel înregistrat în competiție. 
+
+Graficul prezentat mai jos, evidențiază și mai mult distribuirea timpilor de execuție pentru fiecare instanță în parte.
