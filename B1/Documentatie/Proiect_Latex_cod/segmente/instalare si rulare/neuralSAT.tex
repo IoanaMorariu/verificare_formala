@@ -1,10 +1,11 @@
+\hspace{0.5 cm}
 Pentru instalare tool-ului NeuralSAT am urmărit cu strictețe pașii enumerați in ghidul gasit pe site-ul de github al tool-ului \cite{read_neuralsat.md}. Efectuarea unor pași suplimentari nu a fost necesară.
 
 Rularea tool-ului am facut-o prin executarea următoarei comenzi:
     \begin{lstlisting}[style=bashstyle]
     python3 main.py --net "cGAN_imgSz32_nCh_3_upsample.onnx" --spec "cGAN_imgSz32_nCh_3_upsample_prop_0_input_eps_0.010
         _output_eps_0.015.vnnlib" --result_file result19.txt 
-        --export_cex --timeout 1200
+        --export_cex--timeout1200
    \end{lstlisting}
 Ca si output, comnda de mai sus returneaza un rezultat in fisierul dat ca argument, care va conține sat/unsat și timpul de verificare.
 Este important de menționat că rularea tool-ului NeuralSAT a implicat un consum mai mare de timp, deoarece a fost necesar să rulăm tool-ul pentru fiecare instanță în parte. În schimb, în cazul alpha-beta-CROWN, am putut procesa toate instanțele simultan. 

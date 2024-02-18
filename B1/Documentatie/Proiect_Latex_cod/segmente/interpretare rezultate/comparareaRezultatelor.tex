@@ -1,5 +1,4 @@
-
-
+\hspace{0.5 cm}
 În urma rulării a tuturor fișierelor atât pentru alpha\_beta\_CROWN, cât și pentru NeuralSAT am obținut un număr de instanțe, pentru care timpul alocat verificării a fost depășit, egal cu 0. Prin urmare nu avem penalități pentru niciunul dintre tool-uri.
 
 Totodată am obținut un Total verified egal cu 8, și un Total falsified egal cu 11 pentru ambele tool-uri. Pentru alpha\_beta\_CROWN rezultatele sunt identice cu cele din competiție. În cazul NeuralSAT, se poate observa că solver-ul
@@ -36,7 +35,7 @@ este:
 \label{fig:image2} 
 \end{figure}
 \
-Analizând datele din tabelul de mai sus, putem observa că în cazul instanțelor cu rezultat satisfiabil (sat) verificatorul NeuralSAT a obținut timpi puțîn mai reduși de execuție decât alpha-beta-CROWN. Pe de altă parte, în cazul instanțelor cu rezultat nesatisfiabil (unsat) timpii de execuție obținuți de alpha-beta-CROWN sunt semnificativ mai reduși decât cei obținuți de NeuralSAT. Acest lucru este evidențiat și in graficul prezentat mai jos, graficul arată distribuirea timpilor de execuție pentru ambele tool-uri, comparând instanța cu instanța.
+Analizând datele din tabelul \ref{fig:image2}, putem observa că în cazul instanțelor cu rezultat satisfiabil (sat) verificatorul NeuralSAT a obținut timpi de execuție mai reduși  decât alpha-beta-CROWN. Pe de altă parte, în cazul instanțelor cu rezultat nesatisfiabil (unsat) timpii de execuție obținuți de alpha-beta-CROWN sunt semnificativ mai reduși decât cei obținuți de NeuralSAT. Acest lucru este evidențiat și in graficul \ref{fig:image3}. Graficul respectiv arată distribuirea timpilor de execuție pentru ambele tool-uri, comparând instanța cu instanța.
 
 
 
@@ -44,16 +43,16 @@ Analizând datele din tabelul de mai sus, putem observa că în cazul instanțel
 \centering 
 \includegraphics[width=0.8\linewidth]{imagini/interpretare rezultate/Exec_time_comparison.png}
 \caption{Comparare rezultate NeuralSAT vs alpha-beta-CROWN}
-\label{fig:image2} 
+\label{fig:image3} 
 \end{figure}
 \
-Cel de al doilea grafic prezintă suma timpilor de execuție pe parcursul rulării tuturor celor 19 instanțe pe ambele verificatoare. Din acest grafic se poate trage concluzia că alpha-beta-CROWN este un tool mult mai eficient din punct de vedere a timpului de execuție.
+Al doilea grafic \ref{fig:image4}, prezintă suma timpilor de execuție pe parcursul rulării tuturor celor 19 instanțe pe ambele verificatoare. Din acest grafic se poate trage concluzia că alpha-beta-CROWN este un tool mult mai eficient din punct de vedere a timpului de execuție.
 
 \begin{figure}[h]
 \centering 
 \includegraphics[width=0.8\linewidth]{imagini/interpretare rezultate/cumulative_NeuralSAT_vs_abC.png}
-\caption{}
-\label{fig:image2} 
+\caption{Cumulative Execution Time for NeuralSAT vs alpha-beta-CROWN}
+\label{fig:image4} 
 \end{figure}
 \
 

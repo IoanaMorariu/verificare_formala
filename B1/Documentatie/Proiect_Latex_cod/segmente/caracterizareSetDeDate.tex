@@ -1,3 +1,4 @@
+\hspace{0.5 cm}
 Benchmark-ul cGAN aparține mulțimii de benchmark-uri din cadrul competiției VNN-COMP 2023 \cite{vnncompBenchmarks}. Acesta conține o rețea de tip generativă adversarială condiționată și un set de specificații. Benchmark-ul este folosit pentru a verifica corectitudinea și robustețea rețelei pe care o conține. În cadrul set-ului de date, există două tipuri de fișiere: .onnx (Open Neural Network Exchange) și .vnnlib. În fișierele .onnx sunt reprezentate rețele neuronale, acestea conțin informații necesare pentru a executa modelul neuronal. Fișierele .vnnlib conțin specificațiile ce trebuie respectate de rețeaua neuronală, astfel încât aceasta să fie corectă și robustă.
 
 Atât fișierele .onnx cât și .vnnlib au o denumire sugestivă care să indice informații despre conținutul acestora.
@@ -65,7 +66,7 @@ Toate fisierele .vnnlib au același conținut, diferențiindu-se prin valorile d
 
 \end{lstlisting}
 
-Luând în considerare succinta descriere a autorului benchmark-ului , din fișiere .vnnlib, am dedus următoarele:
+Luând în considerare succinta descriere a autorului benchmark-ului \cite{vnncomp2023Chat}, din fișiere .vnnlib, am dedus următoarele:
 
 \begin{itemize}
   \item \textit{X\_0} - reprezintă condiția de distanță ce este o variabilă cuprinsă între 0 și 1 și reprezintă normalizarea de la 0m la 30 m (de exemplu dacă condiția de distanță este 0,5, înseamnă că va fi generată o imagine ce are obstacolul la 0,5*30m=15m)
