@@ -1,0 +1,249 @@
+\begin{frame}{Rezultate alpha-beta-CROWN}
+    \begin{figure}[ht]
+    \centering
+    {\includegraphics[width=11cm]{images/interpretare/abC_comp_vs_us.png}}
+    \label{rezultateAlpha}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Rezultate alpha-beta-CROWN}
+    \begin{figure}[ht]
+    \centering
+    {\includegraphics[width=8cm]{images/interpretare/abC_us_vs_vnncomp.png}}
+    \label{rezultateAlpha}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Rezultate NeuralSAT}
+    \begin{figure}[ht]
+    \centering
+    {\includegraphics[width=11cm]{images/interpretare/NeuralSAT_comp_vs_us.png}}
+    \label{rezultateNeuralSat}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Rezultate NeuralSAT}
+    \begin{figure}[ht]
+    \centering
+    {\includegraphics[width=8cm]{images/interpretare/NeuralSAT_us_vs_vnncomp2023.png}}
+    \label{rezultateNeuralSat}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Rezultate alpha-beta-CROWN vs NeuralSAT}
+    \begin{figure}[ht]
+    \centering
+    {\includegraphics[width=11cm]{images/interpretare/alpha-beta-CROWN_vs_NeuralSAT.png}}
+    \label{rezultateNeuralSat}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Rezultate alpha-beta-CROWN vs NeuralSAT}
+    \begin{figure}[ht]
+    \centering
+    {\includegraphics[width=8cm]{images/interpretare/Exec_time_comparison.png}}
+    \label{rezultateNeuralSat}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Rezultate alpha-beta-CROWN vs NeuralSAT}
+    \begin{figure}[ht]
+    \centering
+    {\includegraphics[width=8cm]{images/interpretare/cumulative_NeuralSAT_vs_abC.png}}
+    \label{rezultateNeuralSat}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Rezultate}
+    \begin{figure}[ht]
+    \centering
+    {\includegraphics[width=10cm]{images/interpretare/formula.png}}
+    \label{tabelTotal}
+    \end{figure}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% \begin{frame}{Rezultate obtinute folosind alpha\textunderscore beta\textunderscore crown}   
+%     \begin{table}[H]
+%     \centering
+%     \begin{adjustwidth}{}{} % Specifică cât de mult să depășească în stânga și în dreapta
+%     \setlength{\tabcolsep}{0pt} % Ajustează spațiul între coloane
+%     \renewcommand{\arraystretch}{1.7} % Ajustează spațiul între rânduri
+%     \resizebox{\textwidth}{!}{%
+%     \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%       \textbf{ONNX} & \textbf{VNNLIB} & \textbf{Result} & \textbf{Time to verify (s) } \\
+%       \hline
+%       cGAN\_imgSz32\_nCh\_1. & cGAN\_imgSz32\_nCh\_1\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015. & sat & 4.39915 \\
+%       cGAN\_imgSz32\_nCh\_1. & cGAN\_imgSz32\_nCh\_1\_prop\_1\_input\_eps\_0.020\_output\_eps\_0.025. & sat & 4.45147 \\
+%       cGAN\_imgSz32\_nCh\_1. & cGAN\_imgSz32\_nCh\_1\_prop\_2\_input\_eps\_0.020\_output\_eps\_0.025. & sat & 4.37929  \\
+%       cGAN\_imgSz32\_nCh\_1. & cGAN\_imgSz32\_nCh\_1\_prop\_3\_input\_eps\_0.020\_output\_eps\_0.025. &  \cellcolor{gray} unsat & 11.11230  \\
+%       cGAN\_imgSz32\_nCh\_3. & cGAN\_imgSz32\_nCh\_3\_prop\_0\_input\_eps\_0.015\_output\_eps\_0.020. & sat & 4.42455 \\
+%       cGAN\_imgSz32\_nCh\_3. & cGAN\_imgSz32\_nCh\_3\_prop\_1\_input\_eps\_0.010\_output\_eps\_0.015. & \cellcolor{gray} unsat & 16.71046  \\
+%       cGAN\_imgSz32\_nCh\_3. & cGAN\_imgSz32\_nCh\_3\_prop\_2\_input\_eps\_0.010\_output\_eps\_0.015. & sat & 4.31144 \\
+%       cGAN\_imgSz32\_nCh\_3. & cGAN\_imgSz32\_nCh\_3\_prop\_3\_input\_eps\_0.010\_output\_eps\_0.015. & sat & 4.40774 \\
+%       cGAN\_imgSz64\_nCh\_1. & cGAN\_imgSz64\_nCh\_1\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015. & \cellcolor{gray} unsat & 30.27740  \\
+%       cGAN\_imgSz64\_nCh\_1. & cGAN\_imgSz64\_nCh\_1\_prop\_1\_input\_eps\_0.005\_output\_eps\_0.010. & \cellcolor{gray} unsat & 19.29929  \\
+%       cGAN\_imgSz64\_nCh\_1. & cGAN\_imgSz64\_nCh\_1\_prop\_2\_input\_eps\_0.010\_output\_eps\_0.015. & sat & 4.42568  \\
+%       cGAN\_imgSz64\_nCh\_1. & cGAN\_imgSz64\_nCh\_1\_prop\_3\_input\_eps\_0.005\_output\_eps\_0.010. & sat & 4.42309  \\
+%       cGAN\_imgSz64\_nCh\_3. & cGAN\_imgSz64\_nCh\_3\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015. & \cellcolor{gray} unsat & 21.70824  \\
+%       cGAN\_imgSz64\_nCh\_3. & cGAN\_imgSz64\_nCh\_3\_prop\_1\_input\_eps\_0.010\_output\_eps\_0.015. & \cellcolor{gray} unsat & 21.05809  \\
+%       cGAN\_imgSz64\_nCh\_3. & cGAN\_imgSz64\_nCh\_3\_prop\_2\_input\_eps\_0.005\_output\_eps\_0.010. & sat & 4.37459  \\
+%       cGAN\_imgSz64\_nCh\_3. & cGAN\_imgSz64\_nCh\_3\_prop\_3\_input\_eps\_0.010\_output\_eps\_0.015. & sat & 4.47376  \\
+%       cGAN\_imgSz32\_nCh\_3\_nonlinear\_activations. & cGAN\_imgSz32\_nCh\_3\_nonlinear\_activations\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015. & \cellcolor{gray} unsat & 10.39218  \\
+%       cGAN\_imgSz32\_nCh\_1\_transposedConvPadding\_1. & cGAN\_imgSz32\_nCh\_1\_transposedConvPadding\_1\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015. & sat & 4.41804  \\
+%       cGAN\_imgSz32\_nCh\_3\_upsample. & cGAN\_imgSz32\_nCh\_3\_upsample\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015. & \cellcolor{gray} unsat & 9.82781  \\
+%       \hline
+%     \end{tabular}%
+%     }
+%   \end{adjustwidth}
+%   \end{table}
+% \end{frame}
+
+% \begin{frame}{Rezultate obtinute in competitie folosind alpha\textunderscore beta\textunderscore crown}   
+% \begin{table}[htbp]
+%   \centering
+%   \setlength{\tabcolsep}{0pt} % Ajustează spațiul între coloane
+%   \renewcommand{\arraystretch}{1.7} % Ajustează spațiul între rânduri
+%   \resizebox{\textwidth}{!}{%
+%     \begin{tabular}{|c|c|c|c|c|c|}
+%       \hline
+%       \textbf{Benchmark} & \textbf{Neural Network (ONNX)} & \textbf{Specification (VNNLIB)} & \textbf{Result} & \textbf{Time to Verify (s)} \\
+%       \hline
+%       cgan & cGAN\_imgSz32\_nCh\_1. & cGAN\_imgSz32\_nCh\_1\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015.  & sat & 7.45 \\
+%       cgan & cGAN\_imgSz32\_nCh\_1. & cGAN\_imgSz32\_nCh\_1\_prop\_1\_input\_eps\_0.020\_output\_eps\_0.025.  & sat & 7.43 \\
+%       cgan & cGAN\_imgSz32\_nCh\_1. & cGAN\_imgSz32\_nCh\_1\_prop\_2\_input\_eps\_0.020\_output\_eps\_0.025.  & sat & 7.44 \\
+%       cgan & cGAN\_imgSz32\_nCh\_1. & cGAN\_imgSz32\_nCh\_1\_prop\_3\_input\_eps\_0.020\_output\_eps\_0.025.  & \cellcolor{gray}unsat & 11.41 \\
+%       cgan & cGAN\_imgSz32\_nCh\_3. & cGAN\_imgSz32\_nCh\_3\_prop\_0\_input\_eps\_0.015\_output\_eps\_0.020.  & sat & 7.45 \\
+%       cgan & cGAN\_imgSz32\_nCh\_3. & cGAN\_imgSz32\_nCh\_3\_prop\_1\_input\_eps\_0.010\_output\_eps\_0.015.  & \cellcolor{gray}unsat & 13.74 \\
+%       cgan & cGAN\_imgSz32\_nCh\_3. & cGAN\_imgSz32\_nCh\_3\_prop\_2\_input\_eps\_0.010\_output\_eps\_0.015.  & sat & 7.43 \\
+%       cgan & cGAN\_imgSz32\_nCh\_3. & cGAN\_imgSz32\_nCh\_3\_prop\_3\_input\_eps\_0.010\_output\_eps\_0.015.  & sat & 7.47 \\
+%       cgan & cGAN\_imgSz64\_nCh\_1. & cGAN\_imgSz64\_nCh\_1\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015.  & \cellcolor{gray}unsat & 19.36 \\
+%       cgan & cGAN\_imgSz64\_nCh\_1. & cGAN\_imgSz64\_nCh\_1\_prop\_1\_input\_eps\_0.005\_output\_eps\_0.010.  & \cellcolor{gray}unsat & 14.53 \\
+%       cgan & cGAN\_imgSz64\_nCh\_1. & cGAN\_imgSz64\_nCh\_1\_prop\_2\_input\_eps\_0.010\_output\_eps\_0.015.  & sat & 7.42 \\
+%       cgan & cGAN\_imgSz64\_nCh\_1. & cGAN\_imgSz64\_nCh\_1\_prop\_3\_input\_eps\_0.005\_output\_eps\_0.010.  & sat & 7.46 \\
+%       cgan & cGAN\_imgSz64\_nCh\_3. & cGAN\_imgSz64\_nCh\_3\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015.  & \cellcolor{gray}unsat & 15.68 \\
+%       cgan & cGAN\_imgSz64\_nCh\_3. & cGAN\_imgSz64\_nCh\_3\_prop\_1\_input\_eps\_0.010\_output\_eps\_0.015.  & \cellcolor{gray}unsat & 15.29 \\
+%       cgan & cGAN\_imgSz64\_nCh\_3. & cGAN\_imgSz64\_nCh\_3\_prop\_2\_input\_eps\_0.005\_output\_eps\_0.010.  & sat & 7.44 \\
+%       cgan & cGAN\_imgSz64\_nCh\_3. & cGAN\_imgSz64\_nCh\_3\_prop\_3\_input\_eps\_0.010\_output\_eps\_0.015.  & sat & 7.47 \\
+%       cgan & cGAN\_imgSz32\_nCh\_3\_nonlinear\_activations. & cGAN\_imgSz32\_nCh\_3\_nonlinear\_activations\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015. & \cellcolor{gray}unsat & 11.61 \\
+%       cgan & cGAN\_imgSz32\_nCh\_1\_transposedConvPadding\_1. & cGAN\_imgSz32\_nCh\_1\_transposedConvPadding\_1\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015. & sat & 7.45 \\
+%       cgan & cGAN\_imgSz32\_nCh\_3\_upsample. & cGAN\_imgSz32\_nCh\_3\_upsample\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015. & \cellcolor{gray}unsat & 10.79 \\
+%       \hline
+%     \end{tabular}%
+%     }
+%     \end{table}
+% \end{frame}
+
+% \begin{frame}{Rezultate obtinute folosind NeuralSat}   
+% \begin{table}[H]
+%   \centering
+%   \begin{adjustwidth}{}{} % Specifică cât de mult să depășească în stânga și în dreapta
+%   \setlength{\tabcolsep}{0pt} % Ajustează spațiul între coloane
+%   \renewcommand{\arraystretch}{1.7} % Ajustează spațiul între rânduri
+%   \resizebox{\textwidth}{!}{%
+%     \begin{tabular}{|c|c|c|c|c|}
+%       \hline
+%       \textbf{Benchmark} & \textbf{ONNX} & \textbf{Specification (VNNLIB)} & \textbf{Result} & \textbf{Time to Verify (s)} \\
+%       \hline
+%       cgan & cGAN\_imgSz32\_nCh\_1. & cGAN\_imgSz32\_nCh\_1\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015. & sat & 3.175035 \\
+%       cgan & cGAN\_imgSz32\_nCh\_1. & cGAN\_imgSz32\_nCh\_1\_prop\_1\_input\_eps\_0.020\_output\_eps\_0.025. & sat & 3.137382 \\
+%       cgan & cGAN\_imgSz32\_nCh\_1. & cGAN\_imgSz32\_nCh\_1\_prop\_2\_input\_eps\_0.020\_output\_eps\_0.025. & sat & 3.126519 \\
+%       cgan & cGAN\_imgSz32\_nCh\_1. & cGAN\_imgSz32\_nCh\_1\_prop\_3\_input\_eps\_0.020\_output\_eps\_0.025. & \cellcolor{gray}unsat & 13.556497 \\
+%       cgan & cGAN\_imgSz32\_nCh\_3. & cGAN\_imgSz32\_nCh\_3\_prop\_0\_input\_eps\_0.015\_output\_eps\_0.020. & sat & 4.432113 \\
+%       cgan & cGAN\_imgSz32\_nCh\_3. & cGAN\_imgSz32\_nCh\_3\_prop\_1\_input\_eps\_0.010\_output\_eps\_0.015. & \cellcolor{gray}unsat & 60.970006 \\
+%       cgan & cGAN\_imgSz32\_nCh\_3. & cGAN\_imgSz32\_nCh\_3\_prop\_2\_input\_eps\_0.010\_output\_eps\_0.015. & sat & 3.205494 \\
+%       cgan & cGAN\_imgSz32\_nCh\_3. & cGAN\_imgSz32\_nCh\_3\_prop\_3\_input\_eps\_0.010\_output\_eps\_0.015. & sat & 3.269871 \\
+%       cgan & cGAN\_imgSz64\_nCh\_1. & cGAN\_imgSz64\_nCh\_1\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015. & \cellcolor{gray}unsat & 161.189276 \\
+%       cgan & cGAN\_imgSz64\_nCh\_1. & cGAN\_imgSz64\_nCh\_1\_prop\_1\_input\_eps\_0.005\_output\_eps\_0.010. & \cellcolor{gray}unsat & 173.990763 \\
+%       cgan & cGAN\_imgSz64\_nCh\_1. & cGAN\_imgSz64\_nCh\_1\_prop\_2\_input\_eps\_0.010\_output\_eps\_0.015. & sat & 4.552644 \\
+%       cgan & cGAN\_imgSz64\_nCh\_1. & cGAN\_imgSz64\_nCh\_1\_prop\_3\_input\_eps\_0.005\_output\_eps\_0.010. & sat & 3.337892 \\
+%       cgan & cGAN\_imgSz64\_nCh\_3. & cGAN\_imgSz64\_nCh\_3\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015. & \cellcolor{gray}unsat & 159.679505 \\
+%       cgan & cGAN\_imgSz64\_nCh\_3. & cGAN\_imgSz64\_nCh\_3\_prop\_1\_input\_eps\_0.010\_output\_eps\_0.015. & \cellcolor{gray}unsat & 175.243838 \\
+%       cgan & cGAN\_imgSz64\_nCh\_3. & cGAN\_imgSz64\_nCh\_3\_prop\_2\_input\_eps\_0.005\_output\_eps\_0.010. & sat & 3.311298 \\
+%       cgan & cGAN\_imgSz64\_nCh\_3. & cGAN\_imgSz64\_nCh\_3\_prop\_3\_input\_eps\_0.010\_output\_eps\_0.015. & sat & 4.474263 \\
+%       cgan & cGAN\_imgSz32\_nCh\_3\_nonlinear\_activations. & cGAN\_imgSz32\_nCh\_3\_nonlinear\_activations\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015. & \cellcolor{gray}unsat & 22.691869 \\
+%       cgan & cGAN\_imgSz32\_nCh\_1\_transposedConvPadding\_1. & cGAN\_imgSz32\_nCh\_1\_transposedConvPadding\_1\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015. & sat & 3.235317 \\
+%       cgan & cGAN\_imgSz32\_nCh\_3\_upsample. & cGAN\_imgSz32\_nCh\_3\_upsample\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015. & \cellcolor{gray}unsat & 24.717013 \\
+%       \hline
+%     \end{tabular}%
+%   }
+%   \end{adjustwidth}
+% \end{table}
+% \end{frame}
+
+% \begin{frame}{Rezultate obtinute in competitie folosind NeuralSat}   
+% \begin{table}[htbp]
+%   \centering
+%   \setlength{\tabcolsep}{0pt} % Ajustează spațiul între coloane
+%   \renewcommand{\arraystretch}{1.7} % Ajustează spațiul între rânduri
+%   \resizebox{\textwidth}{!}{%
+%     \begin{tabular}{|c|c|c|c|c|c|}
+%       \hline
+%       \textbf{Benchmark} & \textbf{Neural Network (ONNX)} & \textbf{Specification (VNNLIB)}  & \textbf{Result} & \textbf{Time to Verify (s)} \\
+%       \hline
+%       cgan & cGAN\_imgSz32\_nCh\_1. & cGAN\_imgSz32\_nCh\_1\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015.  & sat & 4.158000 \\
+%       cgan & cGAN\_imgSz32\_nCh\_1. & cGAN\_imgSz32\_nCh\_1\_prop\_1\_input\_eps\_0.020\_output\_eps\_0.025.  & sat & 4.106945 \\
+%       cgan & cGAN\_imgSz32\_nCh\_1. & cGAN\_imgSz32\_nCh\_1\_prop\_2\_input\_eps\_0.020\_output\_eps\_0.025.  & sat & 4.100790\\
+%       cgan & cGAN\_imgSz32\_nCh\_1. & cGAN\_imgSz32\_nCh\_1\_prop\_3\_input\_eps\_0.020\_output\_eps\_0.025.  & \cellcolor{gray}unsat & 20.074181 \\
+%       cgan & cGAN\_imgSz32\_nCh\_3. & cGAN\_imgSz32\_nCh\_3\_prop\_0\_input\_eps\_0.015\_output\_eps\_0.020.  & sat & 4.090721 \\
+%       cgan & cGAN\_imgSz32\_nCh\_3. & cGAN\_imgSz32\_nCh\_3\_prop\_1\_input\_eps\_0.010\_output\_eps\_0.015.  & \cellcolor{gray}unsat & 813.175559 \\
+%       cgan & cGAN\_imgSz32\_nCh\_3. & cGAN\_imgSz32\_nCh\_3\_prop\_2\_input\_eps\_0.010\_output\_eps\_0.015.  & sat & 4.062533 \\
+%       cgan & cGAN\_imgSz32\_nCh\_3. & cGAN\_imgSz32\_nCh\_3\_prop\_3\_input\_eps\_0.010\_output\_eps\_0.015.  & sat & 4.093121 \\
+%       cgan & cGAN\_imgSz64\_nCh\_1. & cGAN\_imgSz64\_nCh\_1\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015.  & \cellcolor{red}unknown & 13.634478 \\
+%       cgan & cGAN\_imgSz64\_nCh\_1. & cGAN\_imgSz64\_nCh\_1\_prop\_1\_input\_eps\_0.005\_output\_eps\_0.010.  & \cellcolor{red}unknown & 12.826754 \\
+%       cgan & cGAN\_imgSz64\_nCh\_1. & cGAN\_imgSz64\_nCh\_1\_prop\_2\_input\_eps\_0.010\_output\_eps\_0.015.  & sat & 4.101576 \\
+%       cgan & cGAN\_imgSz64\_nCh\_1. & cGAN\_imgSz64\_nCh\_1\_prop\_3\_input\_eps\_0.005\_output\_eps\_0.010.  & sat & 4.076540\\
+%       cgan & cGAN\_imgSz64\_nCh\_3. & cGAN\_imgSz64\_nCh\_3\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015.  & \cellcolor{red}unknown & 13.494352 \\
+%       cgan & cGAN\_imgSz64\_nCh\_3. & cGAN\_imgSz64\_nCh\_3\_prop\_1\_input\_eps\_0.010\_output\_eps\_0.015.  & \cellcolor{red}unknown & 14.104266 \\
+%       cgan & cGAN\_imgSz64\_nCh\_3. & cGAN\_imgSz64\_nCh\_3\_prop\_2\_input\_eps\_0.005\_output\_eps\_0.010.  & sat & 4.106288 \\
+%       cgan & cGAN\_imgSz64\_nCh\_3. & cGAN\_imgSz64\_nCh\_3\_prop\_3\_input\_eps\_0.010\_output\_eps\_0.015.  & sat & 4.119278 \\
+%       cgan & cGAN\_imgSz32\_nCh\_3\_nonlinear\_activations. & cGAN\_imgSz32\_nCh\_3\_nonlinear\_activations\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015.  & \cellcolor{gray}unsat & 25.971333 \\
+%       cgan & cGAN\_imgSz32\_nCh\_1\_transposedConvPadding\_1. & cGAN\_imgSz32\_nCh\_1\_transposedConvPadding\_1\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015.  & sat & 4.069863 \\
+%       cgan & cGAN\_imgSz32\_nCh\_3\_upsample. & cGAN\_imgSz32\_nCh\_3\_upsample\_prop\_0\_input\_eps\_0.010\_output\_eps\_0.015.  & \cellcolor{red}error & 5.869110 \\
+%       \hline
+%     \end{tabular}%
+%   }
+% \end{table}
+% \end{frame}
+
+
+
+

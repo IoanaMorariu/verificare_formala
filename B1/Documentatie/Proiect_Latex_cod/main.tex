@@ -1,125 +1,53 @@
-\documentclass[12pt,a4paper]{report}
-\usepackage[utf8]{inputenc}
-\usepackage{cite}
-\usepackage{float}
-\usepackage{csquotes}
-\usepackage[english]{babel}
-\usepackage{multirow}
-\usepackage[normalem]{ulem}
-\useunder{\uline}{\ul}{}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage[T1]{fontenc}
-\usepackage{listings}
-\usepackage{xcolor}
-\usepackage{subfig}
-\usepackage{geometry}
-\usepackage{xcolor}
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage{tabularx} % Adaugat pachetul tabularx
-\usepackage{changepage} % Adaugă pachetul pentru mediu adjustwidth
-\usepackage{booktabs}
-\usepackage{amsmath}
-\usepackage{enumitem}
+\documentclass{beamer}
+\usetheme{Boadilla}
+\usecolortheme{seahorse}
+\usefonttheme{serif}
 
-\lstdefinestyle{bashstyle}{
-    language=bash,
-    basicstyle=\small\ttfamily,
-    backgroundcolor=\color{gray!10},
-    frame=tb,
-    framerule=0pt,
-    aboveskip=3mm,
-    belowskip=3mm,
-    showstringspaces=false,
-    columns=flexible,
-    numbers=none,
-    keywordstyle=\color{blue},
-    commentstyle=\color{gray},
-    stringstyle=\color{green!60!black},
-    breaklines=true,
-    breakatwhitespace=true,
-    tabsize=4
-}
+\usepackage{lipsum}
+\usepackage{graphicx,xcolor}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{colortbl}
 
-\renewcommand\thesection{\arabic{section}.} 
-\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
-\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}} % Subsubsection numbering format
+\AtBeginSection[]{ 
+    \begin{frame}{Outline} 
+        \frametitle{Cuprins}
+        \tableofcontents[currentsection] 
+    \end{frame} }
 
+\title{Verificarea rețelelor neuronale folosind alpha-beta-CROWN și NeuralSAT pentru benchmark-ul cGan al competiției VNN-Comp2023}
 
-\title{Verificarea rețelelor neuronale folosind alpha\textunderscore beta\textunderscore crown și NeuralSat pentru benchmark-ul cGan al competiției VNN-Comp 2023}
-\author{ Diaconu Laura\\ Domșa Emanuel\\Laptedulce Anastasia \\ Morariu Ioana-Alexandra \\ Romaneț Rareș}
+\author{Diaconu Laura \\ Domșa Emanuel \\
+Laptedulce Anastasia \\ Morariu Ioana-Alexandra \\
+Romaneț Rareș}
 
 \date{}
 
 
+\titlegraphic{\includegraphics[width=1.5cm]{images/logo/uvt.jpg}}
+
 \begin{document}
-\maketitle
+
+\begin{frame}
+\titlepage
+\end{frame}
 
 
-\begin{abstract}
-In this paper, we attempted to reproduce the results from the VNNCOMP-2023 competition, specifically focusing on the alpha-beta-CROWN and Marabou tools applied to the cGAN benchmark within the same competition. The paper begins with a brief description of how cGAN neural networks operate, followed by a characterization of the dataset and the steps taken to install the tools and run them. We analyzed the data obtained from the runs and compared them with those obtained in the competition. \textbf{TO DO: Maybe add a brief ideea of the conlusions made after analysis}
-\end{abstract}
-\tableofcontents
-\newpage
+\section{Analiza modului de funcționare a rețelei neuronale}
+\input{segments/descriereModelCGAN}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introducere - Funcționarea rețelei neuronale}
-\input{segmente/introducere}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Caracterizarea setului de date cGAN}
+\input{segments/benchmark}
 
+\section{Configurare tool-uri}
+\input{segments/configurare}
 
+\section{Interpretare rezultate}
+\input{segments/interpretare}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Caracterizarea setului de date}
-\input{segmente/caracterizareSetDeDate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Rețele neuronale în simularea provocărilor reale}
+\input{segments/introducere}
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Instalarea și rularea tool-urilor}
-\input{segmente/instalare si rulare/general}
-    \subsection{alpha-beta-CROWN}
-    \input{segmente/instalare si rulare/alpha-beta_CROWN}
-    \subsection{NeuralSAT}
-    \input{segmente/instalare si rulare/neuralSAT}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Interpretarea rezultatelor}
-    \subsection{alpha-beta-CROWN}
-    \input{segmente/interpretare rezultate/alpha-beta-CROWN}
-    \newpage
-    \subsection{NeuralSAT}
-    \input{segmente/interpretare rezultate/neuralSAT}
-    \newpage
-    \subsection{Compararea rezultatelor obținute pe cele două tool-uri}
-    \input{segmente/interpretare rezultate/comparareaRezultatelor}
-    \newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Rețelele neuronale în simularea provocărilor reale}
-\input{segmente/aplicatiiNN.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Concluzii}
-\input{segmente/concluzii}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-\bibliography{mybib}
-\bibliographystyle{IEEEtran}
-\bibliographystyle{alpha}
-\addcontentsline{toc}{chapter}{Bibliography}
+\input{segments/concluzii}
 
 \end{document}
